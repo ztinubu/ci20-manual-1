@@ -1,0 +1,161 @@
+body {
+font-family: 'Lato', sans-serif;
+font-weight: 100; 
+/*display: flex;*/
+
+}
+/*div {
+	position: absolute;
+	float: left;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}*/
+
+.outer-circle {  
+	align-items: center; 
+	background: rgba(255, 255, 255, 0.8);
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    top: 50%;
+    left: 25%;
+    position: absolute;
+    margin-right: 800px;
+
+}
+#big-text{
+	font-weight: 800;
+	font-size: 70px;
+	right: 75%;
+	margin-right: 500px;
+	letter-spacing: -0.4em;
+	font-stretch: 4em;
+	padding-left: 0px;
+}
+/*#big-text : hover {
+	letter-spacing: -0.25em;
+}*/
+.second-inner-cirlce {
+	background: #ff77ff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    /*z-index: 1;*/
+}
+.output-instructions {
+	float: left;
+	opacity: 0;
+	padding:0px;
+
+}
+.output-instructions:hover {
+	opacity: 1;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in;
+}
+#select {
+	float: left;
+	
+
+}
+ul {
+	text-decoration: none;
+	list-style: none;
+	float: right;
+	padding-left: 0px;
+
+}
+
+p {
+	top: 50%;
+	left: 50%;
+	position: relative;
+	margin-left: -4em;
+	
+}
+
+p:hover {
+	opacity: 0.5;
+	color: #03f0fc;
+	transition-timing-function: ease-in;
+	/*transition-duration: 0.25s;*/
+}
+
+#cotton-normal {
+	transform: translate(-400px, -70px) rotate(90deg);
+
+}
+#towels {
+	transform: translate(-510px, -25px) rotate(90deg);
+	
+
+}
+#allergen {
+	transform: translate(-615px) rotate(90deg);
+}
+#jeans {
+	transform: translate(-700px, 60px) rotate(90deg);
+}
+#heavy-duty {
+	transform: translate(-750px, 100px) rotate(90deg);
+}
+#drum-clean {
+	transform: translate(-780px, 200px) rotate(90deg);
+}
+#perm-press {
+	transform: translate(-750px, 300px) rotate(90deg);
+}
+#perm-p-light-soil {
+	transform: translate(-700px, 340px) rotate(90deg);
+}
+#perm-p-heavy-soil {
+	transform: translate(-615px, 380px) rotate(90deg);
+}
+#delicates {
+	transform: translate(-510px, 425px) rotate(90deg);
+}
+#quick-30 {
+	transform: translate(-380px, 440px) rotate(90deg);
+}
+#rinse-spin {
+	transform: translate(-260px, 355px) rotate(90deg);
+}
+#powder {
+	transform: translate(-170px, 245px ) rotate(90deg);
+}
+#liquid {
+	transform: translate(-65px, 145px ) rotate(90deg);
+}
+#pod {
+	transform: translate(-10px, 30px) rotate(90deg);
+}
+#cold {
+	transform: translate(45px, -130px) rotate(90deg);
+}
+#warm {
+	transform: translate(-10px, -280px) rotate(90deg);
+}
+#hot {
+	transform: translate(-50px, -410px) rotate(90deg);
+}
+#extra-hot {
+	transform: translate(-140px, -560px) rotate(90deg);
+}
+#no-spin {
+	transform: translate(-260px, -655px) rotate(90deg);
+}
+
+
+@media (max-width: 700px) {
+		/*more css goes here*/
+		/*if the statement in parenthesees is true it will apply these styles*/
+
+		body {
+			flex-direction: column;
+			column-count: 1;
+		}
+	}
