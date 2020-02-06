@@ -6,75 +6,229 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:100&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Codystar:300|Lato:100&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Antic+Didone&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,100i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:600i&display=swap" rel="stylesheet">
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.slim.js"
+  integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+  crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
 </head>
 <body>
 	<header id="big-text">
+	<div class="header-space"></div>
 		<h1>
+
 			LAUNDROMAT
 		</h1>
 	</header>
 	<!-- <div id="select">SELECT OPTION</div> -->
+
 	
-	<div class="output-instructions">
+		<div class="output-instructions">
 		<ul>
-			<li> Place selected clothing [input] directly into machine</li>
-			<li>Place [x] detergent directly into machine [into detergent slot]</li>
-			<li>Select [x] temperature setting.</li>
-			<li>Select [x] spin speed</li>
-			<li>Time [x] minutes</li>
+			<li> Place selected clothing directly into machine</li>
+
+			<li> Select Mode: [<span id="step-1">x</span>]</li>
+
+			<li>Select detergent: [<span id="step-2">x</span>] Place into detergent slot</li>
+
+			<li>Select temperature setting:  [<span id="step-3">x</span>]</li>
+
+			<li>Select spin speed: [<span id="step-4">x</span>] </li>
+
+			<li>Time <span id="time">[x]</span> minutes</li>
+
+			<li>Start cycle</li>
+
 			<li>Remove clothing when timer is done.</li>
 		</ul>
 	</div>
-
-	<div class="outer-circle">
-		<p id="cotton-normal">COTTON NORMAL</p>
+		
+	
+	<!-- 
+<div class="container"> -->
+	<div class="outer-circle" style='z-index: 4'>
+		<p id="cotton-normal">COTTON</p>
 		<p id="towels">TOWELS</p>
 		<p id="allergen">ALLERGEN</p>
 		<p id="jeans">JEANS</p>
-		<p id="heavy-duty">HEAVY DUTY</p>
-		<p id="drum-clean">DRUM CLEAN</p>
-		<p id="perm-press">PERM PRESS</p>
-		<p id="perm-p-light-soil">PERM P LIGHT SOIL</p>
-		<p id="perm-p-heavy-soil">PERM P HEAVY SOIL</p>
+		<p id="heavy-duty">HEAVY <!-- DUTY --></p>
+		<p id="drum-clean">DRUM</p>
+		<p id="perm-press">PRESS</p>
+		<p id="perm-p-light-soil">LIGHT SL</p>
+		<p id="perm-p-heavy-soil">HEAVY SL</p>
 		<p id="delicates">DELICATES</p>
 		<p id="quick-30">QUICK 30</p>
 		<p id="rinse-spin">RINSE</p>	
-		<p id="powder">POWDER</p>
+		<!-- <p id="powder">POWDER</p>
 		<p id="liquid">LIQUID</p>
 		<p id="pod">POD</p>
 		<p id="cold">COLD</p>
 		<p id="warm">WARM</p>
 		<p id="hot">HOT</p>
 		<p id="extra-hot">EXTRA HOT</p>
-		<p id="no-spin">NO-SPIN</p>
-		
-		
-		
-
-	
+		<p id="no-spin">NO-SPIN</p> -->
 	</div>
-	<!-- <div class="second-inner-circle">
-			<p id="powder"></p>
-			<p id="liquid"></p>
-			<p id="pod"></p>
+	<div class="second-inner-circle" style='z-index: 3'>
+			<p id="powder">POWDER</p>
+			<p id="liquid">LIQUID</p>
+			<p id="pod">POD</p>
+			<p id="none">NONE</p>
 		</div>
-
-	<div class="third-inner-circle">
+	<div class="third-inner-circle" style='z-index: 2'>
 		<p id="cold">COLD</p>
 		<p id="warm">WARM</p>
 		<p id="hot">HOT</p>
-		<p id="extra-hot">EXTRA HOT</p>
-	</div> -->
-<!-- 	<div class="core-inner-circle">
-		<p id="no-spin">NO-SPIN</p>
+		<p id="extra-hot">X-HOT</p>
+	</div>
+	<div class="core-inner-circle" style='z-index: 1'>
+		<p id="no-spin">XSPIN</p>
 		<P id="low">LOW</P>
-		<p id="med">MEDIUM</p>
+		<p id="med">MED</p>
 		<P id="high">HIGH</P>
 
-	</div> -->
+	</div>
+<!-- </div> -->
+	
 
+	
+
+<script>
+// $('.outer-circle').click(function() {
+// 	var text=$(this).text();
+// 	$('#step-1').html(text);
+// 	return false;
+// })
+// step 1
+
+document.getElementById("cotton-normal").onclick = function () {
+	document.getElementById("step-1").innerHTML = "cotton-normal";
+	document.getElementById("step-1").style.color = "red";
+	document.getElementById("time").innerHTML = "45";
+	document.getElementById("time").style.color = "red";
+	
+};
+document.getElementById("towels").onclick = function () {
+	document.getElementById("step-1").innerHTML = "towels";
+	document.getElementById("step-1").style.color = "red";
+	document.getElementById("time").innerHTML = "120";
+	document.getElementById("time").style.color = "red";
+};
+document.getElementById("allergen").onclick = function () {
+	document.getElementById("step-1").innerHTML = "allergen";
+	document.getElementById("step-1").style.color = "red";
+	document.getElementById("time").innerHTML = "60";
+	document.getElementById("time").style.color = "red";
+};
+document.getElementById("jeans").onclick = function () {
+	document.getElementById("step-1").innerHTML = "jeans";
+	document.getElementById("step-1").style.color = "red";
+	document.getElementById("time").innerHTML = "45";
+	document.getElementById("time").style.color = "red";
+};
+document.getElementById("heavy-duty").onclick = function () {
+	document.getElementById("step-1").innerHTML = "heavy-duty";
+	document.getElementById("step-1").style.color = "red";
+	document.getElementById("time").innerHTML = "120";
+	document.getElementById("time").style.color = "red";
+};
+document.getElementById("drum-clean").onclick = function () {
+	document.getElementById("step-1").innerHTML = "drum-clean";
+	document.getElementById("step-1").style.color = "red";
+	document.getElementById("time").innerHTML = "60";
+	document.getElementById("time").style.color = "red";
+};
+document.getElementById("perm-press").onclick = function () {
+	document.getElementById("step-1").innerHTML = "perm-press";
+	document.getElementById("step-1").style.color = "red";
+	document.getElementById("time").innerHTML = "50";
+	document.getElementById("time").style.color = "red";
+};
+document.getElementById("perm-p-light-soil").onclick = function () {
+	document.getElementById("step-1").innerHTML = "perm-p-light-soil";
+	document.getElementById("step-1").style.color = "red";
+	document.getElementById("time").innerHTML = "45";
+	document.getElementById("time").style.color = "red";
+};
+document.getElementById("perm-p-heavy-soil").onclick = function () {
+	document.getElementById("step-1").innerHTML = "perm-p-heavy-soil";
+	document.getElementById("step-1").style.color = "red";
+	document.getElementById("time").innerHTML = "75";
+	document.getElementById("time").style.color = "red";
+};
+document.getElementById("delicates").onclick = function () {
+	document.getElementById("step-1").innerHTML = "delicates";
+	document.getElementById("step-1").style.color = "red";
+	document.getElementById("time").innerHTML = "60";
+	document.getElementById("time").style.color = "red";
+};
+document.getElementById("quick-30").onclick = function () {
+	document.getElementById("step-1").innerHTML = "quick-30";
+	document.getElementById("step-1").style.color = "red";
+	document.getElementById("time").innerHTML = "30";
+	document.getElementById("time").style.color = "red";
+};
+document.getElementById("rinse-spin").onclick = function () {
+	document.getElementById("step-1").innerHTML = "rinse-spin";
+	document.getElementById("step-1").style.color = "red";
+	document.getElementById("time").innerHTML = "40";
+	document.getElementById("time").style.color = "red";
+};
+
+// step 2
+document.getElementById("powder").onclick = function () {
+	document.getElementById("step-2").innerHTML = "powder";
+	document.getElementById("step-2").style.color = "red";
+};
+document.getElementById("liquid").onclick = function () {
+	document.getElementById("step-2").innerHTML = "liquid";
+	document.getElementById("step-2").style.color = "red";
+};
+document.getElementById("pod").onclick = function () {
+	document.getElementById("step-2").innerHTML = "pod";
+	document.getElementById("step-2").style.color = "red";
+};
+
+
+// step 3
+document.getElementById("cold").onclick = function () {
+	document.getElementById("step-3").innerHTML = "cold";
+	document.getElementById("step-3").style.color = "red";
+};
+document.getElementById("warm").onclick = function () {
+	document.getElementById("step-3").innerHTML = "warm";
+	document.getElementById("step-3").style.color = "red";
+};
+document.getElementById("hot").onclick = function () {
+	document.getElementById("step-3").innerHTML = "hot";
+	document.getElementById("step-3").style.color = "red";
+};
+document.getElementById("extra-hot").onclick = function () {
+	document.getElementById("step-3").innerHTML = "extra-hot";
+	document.getElementById("step-3").style.color = "red";
+};
+// step 4
+document.getElementById("no-spin").onclick = function () {
+	document.getElementById("step-4").innerHTML = "no-spin";
+	document.getElementById("step-4").style.color = "red";
+};
+document.getElementById("low").onclick = function () {
+	document.getElementById("step-4").innerHTML = "low";
+	document.getElementById("step-4").style.color = "red";
+};
+document.getElementById("med").onclick = function () {
+	document.getElementById("step-4").innerHTML = "med";
+	document.getElementById("step-4").style.color = "red";
+};
+document.getElementById("high").onclick = function () {
+	document.getElementById("step-4").innerHTML = "high";
+	document.getElementById("step-4").style.color = "red";
+};
+
+
+</script>
 	
 
 </body>
